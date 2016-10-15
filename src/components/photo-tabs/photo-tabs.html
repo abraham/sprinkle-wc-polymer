@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+
+<dom-module id="photo-tabs">
+  <template>
+    <style is="custom-style">
+      :host {
+        --paper-tab-ink: var(--paper-blue-500);
+      }
+      paper-tabs, paper-toolbar {
+        background-color: #fff;
+        color: var(--paper-blue-500);
+        --paper-tabs-selection-bar-color: var(--paper-blue-500);
+      }
+      paper-tabs {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <paper-tabs selected="{{selected}}">
+      <paper-tab>Nature</paper-tab>
+      <paper-tab>New Zealand</paper-tab>
+      <paper-tab>London</paper-tab>
+    </paper-tabs>
+
+    <iron-pages selected="{{selected}}">
+      <div>
+        <photo-stream client-id="9df26b67b558143fa29670ab7d4f02e8a87dec739e20cc95d1dfac3553dc9bf2" collection-id="327760"></photo-stream>
+      </div>
+      <div>
+        <photo-stream client-id="9df26b67b558143fa29670ab7d4f02e8a87dec739e20cc95d1dfac3553dc9bf2" collection-id="280662"></photo-stream>
+      </div>
+      <div>
+        <photo-stream client-id="9df26b67b558143fa29670ab7d4f02e8a87dec739e20cc95d1dfac3553dc9bf2" collection-id="485"></photo-stream>
+      </div>
+    </iron-pages>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'photo-tabs',
+      properties: {
+        selected: Number
+      }
+    });
+  </script>
+</dom-module>

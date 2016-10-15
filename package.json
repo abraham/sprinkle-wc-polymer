@@ -16,5 +16,9 @@
     "gulp-livereload": "^3.8.1",
     "gulp-polyfiller": "0.0.1",
     "gulp-serve": "^1.4.0"
+  },
+  "dependencies": {
+    "@polymer/polymer": "github:polymer/polymer#2.0-preview",
+    "babel-preset-es2015": "^6.16.0"
   }
 }

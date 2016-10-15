@@ -17,7 +17,7 @@ gulp.task('watch', ['build', 'serve'], () => {
 
 gulp.task('serve', serve('build'));
 
-gulp.task('build', ['copy', 'js']);
+gulp.task('build', ['copy', 'js', 'bower']);
 
 gulp.task('clean', () => {
   return gulp.src('build/*', {read: false})
@@ -39,4 +39,9 @@ gulp.task('polyfills', () => {
 gulp.task('copy', () => {
   return gulp.src(['src/**/*', '!src/js/app.js'])
     .pipe(gulp.dest('build'));
+});
+
+gulp.task('bower', () => {
+  return gulp.src(['bower_components/**/*'])
+    .pipe(gulp.dest('build/bower_components'));
 });
