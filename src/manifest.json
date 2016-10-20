@@ -1,7 +1,7 @@
 {
-  "name": "Sprinkle PWA Demo",
+  "name": "Sprinkle Web Components Demo",
   "short_name": "Sprinkle",
-  "description": "Example PWA that demonstrates an offline web app using the Unsplash REST API.",
+  "description": "Sprinkle is an example app built with Polymer and native Web Components v1.",
   "start_url": "/",
   "background_color": "#2196f3",
   "theme_color": "#2196f3",
