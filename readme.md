@@ -1,6 +1,6 @@
 Sprinkle
 ========
-Example PWA that demonstrates an offline web app using the Unsplash REST API.
+Sprinkle is an example app built with Polymer and native Web Components v1.
 
 Install
 -------
