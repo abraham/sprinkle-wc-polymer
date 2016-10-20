@@ -2,6 +2,8 @@
 <link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
 
+<link rel="stylesheet" href="/css/material.blue-red.min.css">
+
 <dom-module id="photo-tabs">
   <template>
     <style is="custom-style">
@@ -17,7 +19,37 @@
         max-width: 1200px;
         margin: 0 auto;
       }
+      .support-card {
+        width: 400px;
+        margin: 16px auto;
+      }
     </style>
+
+    <div class="support-card mdl-cell mdl-card mdl-shadow--2dp hidden">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Custom Element Support</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <p>It looks like your browser doesn't support the new JavaScript features needed for Custom Elements. This demo app doesn't yet have proper polyfil integration. In the meantime please visit us again in Chrome.</p>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://www.google.com/chrome/">
+          Chrome
+        </a>
+        <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://www.mozilla.org/en-US/firefox/new/">
+          Firefox
+        </a> -->
+        <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://www.opera.com/">
+          Opera
+        </a> -->
+        <!-- TODO: Edge doesn't support Service Workers yet but will soon. -->
+        <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+          Edge
+        </a> -->
+      </div>
+      <div class="mdl-card__menu">
+      </div>
+    </div>
 
     <paper-tabs selected="{{selected}}">
       <paper-tab>Nature</paper-tab>
@@ -43,6 +75,15 @@
       is: 'photo-tabs',
       properties: {
         selected: Number
+      },
+      ready: function() {
+        if ('customElements' in window) {
+          console.log('customElements supported');
+        } else {
+          document.querySelector('.support-card').classList.remove('hidden');
+          document.querySelector('paper-tabs').classList.add('hidden');
+          document.querySelector('iron-pages').classList.add('hidden');
+        }
       }
     });
   </script>
