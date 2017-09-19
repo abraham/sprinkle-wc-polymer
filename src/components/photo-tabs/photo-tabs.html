@@ -23,6 +23,10 @@
         width: 400px;
         margin: 16px auto;
       }
+
+      .hidden {
+        display: none;
+      }
     </style>
 
     <div class="support-card mdl-cell mdl-card mdl-shadow--2dp hidden">
@@ -71,12 +75,21 @@
   </template>
 
   <script>
-    Polymer({
-      is: 'photo-tabs',
-      properties: {
-        selected: Number
-      },
-      ready: function() {
+    class PhotoTabs extends Polymer.Element {
+      static get is() { return 'photo-tabs'; }
+
+      static get properties() {
+        return {
+          selected: Number,
+        };
+      }
+
+      constructor() {
+        super();
+      }
+
+      ready() {
+        super.ready();
         if ('customElements' in window) {
           console.log('customElements supported');
         } else {
@@ -85,6 +98,8 @@
           document.querySelector('iron-pages').classList.add('hidden');
         }
       }
-    });
+    }
+
+    customElements.define(PhotoTabs.is, PhotoTabs);
   </script>
 </dom-module>
