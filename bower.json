@@ -17,6 +17,7 @@
     "iron-pages": "PolymerElements/iron-pages#^2.0.0",
     "paper-toolbar": "polymerelements/paper-toolbar#^2.0.0",
     "paper-header-panel": "polymerelements/paper-header-panel#^2.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "better-img": "pearlbea/better-img#^1.0.5"
   }
 }
