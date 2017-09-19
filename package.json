@@ -1,7 +1,7 @@
 {
   "name": "Sprinkle",
   "version": "1.0.0",
-  "description": "Example PWA that demonstrates an offline web app using the Unsplash REST API.",
+  "description": "Example app that demonstrates Polymer and Web Components using the Unsplash REST API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
     "gulp-serve": "^1.4.0"
   },
   "dependencies": {
-    "@polymer/polymer": "github:polymer/polymer#2.0-preview",
+    "@polymer/polymer": "^2.0.2",
     "babel-preset-es2015": "^6.16.0"
   }
 }

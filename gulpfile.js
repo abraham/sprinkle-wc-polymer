@@ -20,20 +20,20 @@ gulp.task('serve', serve('build'));
 gulp.task('build', ['copy', 'js', 'bower']);
 
 gulp.task('clean', () => {
-  return gulp.src('build/*', {read: false})
+  return gulp.src('build/*', { read: false })
     .pipe(clean());
 });
 
 gulp.task('js', ['polyfills'], () => {
   return gulp.src(['src/js/*.js', '!src/js/*.min.js'])
     .pipe(babel())
-    .pipe(concat("app.js"))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('polyfills', () => {
   return polyfiller.bundle(['Promise', 'Fetch'])
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('copy', () => {

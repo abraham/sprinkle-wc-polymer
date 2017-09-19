@@ -12,10 +12,11 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "polymer/polymer#^1.7.0",
-    "paper-tabs": "PolymerElements/paper-tabs#^1.6.2",
-    "iron-pages": "PolymerElements/iron-pages#^1.0.8",
-    "paper-toolbar": "polymerelements/paper-toolbar#^1.1.6",
-    "paper-header-panel": "polymerelements/paper-header-panel#^1.1.6"
+    "polymer": "polymer/polymer#^2.0.0",
+    "paper-tabs": "PolymerElements/paper-tabs#^2.0.0",
+    "iron-pages": "PolymerElements/iron-pages#^2.0.0",
+    "paper-toolbar": "polymerelements/paper-toolbar#^2.0.0",
+    "paper-header-panel": "polymerelements/paper-header-panel#^2.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
   }
 }
